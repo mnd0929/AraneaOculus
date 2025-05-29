@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.MAUI.Controls"
+             x:Class="AraneaOculus.Agent.UI.MainPage">
+
+    <ScrollView VerticalOptions="Center" HorizontalOptions="Center">
+        <Grid RowSpacing="10" MaximumWidthRequest="300">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Border x:Name="cameraBarcodeReaderBorder" IsVisible="False" Grid.Row="0">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="20" />
+                </Border.StrokeShape>
+                <zxing:CameraBarcodeReaderView x:Name="cameraBarcodeReaderView" BarcodesDetected="cameraBarcodeReaderViewBarcodesDetected" IsDetecting="False" MaximumHeightRequest="300" MaximumWidthRequest="300"/>
+            </Border>
+            <Border Grid.Row="1" StrokeThickness="1" Stroke="Gray" HorizontalOptions="Center" VerticalOptions="Center" Padding="10">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="20" />
+                </Border.StrokeShape>
+                <Grid RowSpacing="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0">
+                        Служба имеет право предоставлять хост-устройству AraneaOculus Manager следующую информацию: &#10;• Уникальный идентификатор этого устройства&#10;• Сетевая статистика
+                    </Label>
+                    <Grid HorizontalOptions="Fill" Grid.Row="1" ColumnSpacing="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Entry x:Name="AddressEntry" Grid.Column="0" Placeholder="Address"/>
+                        <Entry x:Name="PortEntry" Grid.Column="1" Placeholder="Port"/>
+                    </Grid>
+                    <VerticalStackLayout Grid.Row="2" Spacing="10">
+                        <Button x:Name="ScanButton" Text="Start Scan" Clicked="ScanButtonClicked" HorizontalOptions="Fill"/>
+                        <Button x:Name="ConnectButton" Text="Connect" Clicked="ConnectButtonClicked" HorizontalOptions="Fill"/>
+                    </VerticalStackLayout>
+                </Grid>
+            </Border>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

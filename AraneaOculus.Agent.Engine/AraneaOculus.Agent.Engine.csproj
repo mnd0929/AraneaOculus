@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AraneaOculus.Core\AraneaOculus.Core.csproj" />
+    <ProjectReference Include="..\AraneaOculus.Network\AraneaOculus.Network.csproj" />
+    <ProjectReference Include="..\AraneaOculus.Protocol\AraneaOculus.Protocol.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Configuration\" />
+  </ItemGroup>
+
+</Project>

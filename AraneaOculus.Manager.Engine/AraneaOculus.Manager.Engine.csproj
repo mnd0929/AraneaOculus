@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ArpLookup" Version="2.0.3" />
+    <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="9.0.5" />
+    <PackageReference Include="System.Management" Version="9.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AraneaOculus.Core\AraneaOculus.Core.csproj" />
+    <ProjectReference Include="..\AraneaOculus.Network\AraneaOculus.Network.csproj" />
+    <ProjectReference Include="..\AraneaOculus.Protocol\AraneaOculus.Protocol.csproj" />
+  </ItemGroup>
+
+</Project>
