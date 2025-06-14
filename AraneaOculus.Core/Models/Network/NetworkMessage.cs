@@ -13,7 +13,7 @@ namespace AraneaOculus.Core.Models.Network
 
         public DateTime? CreationTime { get; set; }
 
-        public string? Id { get; internal set; }
+        public string? Id { get; set; }
 
         public abstract NetworkMessageType MessageType { get; }
 
