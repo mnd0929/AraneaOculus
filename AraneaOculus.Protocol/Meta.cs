@@ -2,8 +2,8 @@
 {
     public class Meta
     {
-        public const string VersionName = "AraneaContract I";
+        public const string VersionName = "AraneaContract II";
 
-        public const short VersionNumber = 1;
+        public const short VersionNumber = 2;
     }
 }
