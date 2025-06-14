@@ -6,7 +6,6 @@ namespace AraneaOculus.Core.Models.Network
     {
         public NetworkMessage()
         {
-            Id = Guid.NewGuid().ToString();
             CreationTime = DateTime.UtcNow;
         }
 
